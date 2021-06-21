@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter Project in JS</title>
+</head>
+<body>
+   
+    <h1 class="counter">1000</h1>
+    <p class="follower">Followers</p>
+    
+    <script>
+//        var counter=document.querySelector(".counter");
+//        
+//        
+//        let count=1;
+//        
+//        setInterval(() => {
+//            count++;
+//            counter.innerHTML=count;
+//        },10);
+        
+        // it will infinitely.
+        
+        
+        
+        
+    var counter = document.querySelector(".counter");
+        
+    var follower=document.querySelector(".follower")
+        let count=1;
+        
+        setInterval(()=>{
+            if(count<1000){
+                count++;
+                counter.innerHTML=count;
+            }
+        },0.5);//this is time speed we want our number get changed)
+        
+    
+        
+        //now if we want when we reach 1000 followers its says 1000 followrs.so we need timeout fn as it will happen after some timeout of i.e 1000 count is completed.
+         
+        setTimeout( ()=> {
+            follower.innerHTML="1000 follower reached on Instagram!"
+        },4000); //it will say after 3 sec no matter our follower become 1000 or not that setting after 1000 follower its shows massage will do later.
+        
+    
+    
+    </script>
+    
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function in JS</title>
+</head>
+<body>
+        <!-- Function in JS -->
+        <script>
+            function sayHello(){
+                console.log("Hello there");
+            }
+            
+            sayHello();
+            sayHello();
+        </script>
+        
+         <script>
+            function sayHello(name){
+                console.log("Hello there " + name);
+            }
+            
+            sayHello("Bahaul");
+            sayHello("Mustafa");
+            // 2fns can have same name. 
+        </script>
+        
+        <script>
+            // can also use ``
+             function sayHello(name){
+                console.log(`Hello there ${name} how you are doing`);
+            }
+            
+            sayHello("Bahaul");
+            sayHello("Mustafa");
+            
+        </script>
+        
+        <!-- Use of return function    -->
+        <script>
+            function hello(){
+                return "How are you";
+            }
+            
+            var storing_return_value  = hello();
+            console.log(storing_return_value);
+            
+            // we can directly call the function without storing in variable.
+            
+            console.log(hello());
+            
+        </script>
+        
+        <script>
+            function getUserRole(name,role){
+                switch(role){
+                    case "admin":
+                        return "User has all privaleges";
+                        break; //it is not neccessary to put break if return is used.
+                       
+                    case "subadmin":
+                        return "Has privalage of adding and deleting the content";
+                        break;
+                        
+                    case "external-user":
+                        return "Has only privilage to view contents";
+                        break;
+                       
+            }
+            
+            }
+                var user_role=getUserRole("Bahaul","admin")
+                console.log(user_role);
+            
+        </script>
+        
+        <script>
+            //function can also be declared using variable
+            var getUserRole = function (name,role){
+                switch(role){
+                    case "admin":
+                        return "User has all privaleges";
+                        break; //it is not neccessary to put break if return is used.
+                       
+                    case "subadmin":
+                        return "Has privalage of adding and deleting the content";
+                        break;
+                        
+                    case "external-user":
+                        return "Has only privilage to view contents";
+                        break;
+                       
+            }
+            
+            }
+                var user_role=getUserRole("Bahaul","admin")
+                console.log(user_role);
+        </script>
+        
+        <!-- Parse INt function in js        -->
+        <script>
+            function tip(a){
+                var bill = parseInt(a);
+                console.log(bill+ 5); //bill with rs 5 tip.
+            }
+            tip("5")
+            // if we will not used parseInt it will treat 5 as string so 55 will be output
+        </script>
+        
+        
+        <!-- Arrow fn in JS       -->
+        
+        <script>
+            var ifEven = (element) =>{
+//                if(element%3===0){
+//                    return true;
+//                }
+//                    {
+//                    return false;
+//                }
+                return element%2===0;
+            }
+            console.log(ifEven(2))
+            
+            // every function in JS
+            
+            var result=[2,4,6,8].every(ifEven) // it will check even condn fr every elemnt in array if all condn are are                                       
+            // true it will return true and if any one condn is false it will return false.
+            console.log(result);
+        </script>
+        
+        
+        <!-- Callback fn in JS -->
+        
+        <script>
+            var result = [2,3,6,8].every((e) =>( e%2 ===0));
+            console.log(result);
+        
+        </script>
+    
+</body>
+</html>

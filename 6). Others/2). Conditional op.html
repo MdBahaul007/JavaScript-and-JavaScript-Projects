@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conditional Op</title>
+</head>
+<body>
+
+   <script>
+       isLoggedIn =true;
+       isEmailVerified = true;
+       isPaymentDone=false;
+       
+       if(isLoggedIn && isEmailVerified && isPaymentDone){
+           console.log("Purchase successful");
+       }
+       else{
+           console.log("One of the three condition is false");
+       }
+       
+    </script>
+    
+    <script>
+        var emailLogin=true;
+        var googleLogin=false;
+        var facebookLogin=false;
+        
+        if(emailLogin || googleLogin ||facebookLogin){
+            console.log("Login Successful if one of three condition is satisfied.");
+        }
+        else{
+            console.log("Login Denied!!!");        
+        }
+    </script>
+    
+    <!-- Ternaery Opeartor in JS    -->
+    <script>
+        // if user is login show him signout button.
+        // else show him sign in button
+        var authonicated =true;
+        authonicated ? console.log("Show signout button") : console.log("Show sign in button")
+    </script>
+    
+    <!-- COersion in JS    -->
+    
+    <script>
+        var string = "2";
+        if (2==string){
+            console.log("It will be printed");
+            
+        }
+        
+        if(2===string){
+            console.log("Now it will not printed");
+        }
+    </script>
+    
+</body>
+</html>

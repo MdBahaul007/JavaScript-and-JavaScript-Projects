@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Click color</title>
+    <link rel="stylesheet" type="text/css" href="click.color.css" media="screen"/>
+    
+</head>
+<body>
+   <div class="container">
+       <div class="red box"></div>
+       <div class="green box"></div>
+       <div class="blue box"></div>
+       <div class="orange box"></div>
+          
+    
+        <div class="circle"></div>
+     
+        
+   </div>
+   
+   
+<!--
+   <script>
+       var red=document.querySelector(".red");
+       var green=document.querySelector(".green");
+       var blue=document.querySelector(".blue");
+       var orange=document.querySelector(".orange");
+       var circle=document.querySelector(".circle");
+       
+       var getColor=(element)=>{
+           return window.getComputedStyle(element).backgroundColor;
+           
+       };
+       var color=getColor(red);
+       
+       red.addEventListener("mouseenter",()=>{
+           circle.style.background=color;
+       });
+    
+    </script>  
+-->
+   <script>
+       
+       var red=document.querySelector(".red");
+       var green=document.querySelector(".green");
+       var blue=document.querySelector(".blue");
+       var orange=document.querySelector(".orange");
+       var circle=document.querySelector(".circle");
+       var getColor=(element)=>{
+           return window.getComputedStyle(element).backgroundColor;
+           
+       };
+       
+       var magicColorChanger=(ele,color)=>{
+           return ele.addEventListener("mouseenter",()=>{
+               circle.style.background=color;
+           });
+       };
+       magicColorChanger(red,getColor(red));
+       magicColorChanger(green,getColor(green));
+       magicColorChanger(blue,getColor(blue));
+       magicColorChanger(orange,getColor(orange));
+       
+       
+       
+    
+    </script>
+    
+</body>
+</html>

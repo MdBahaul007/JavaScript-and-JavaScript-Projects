@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fill and filter in array</title>
+</head>
+<body>
+   
+   <script>
+       var arr = [1,2,3,4,5,6,7,8];
+       arr.fill("h") // it will replace all the no in array with h 
+       
+       console.log(arr);
+   </script>
+   
+   <script>
+    
+       var arr = [1,2,3,4,5,6,7,8];
+       arr.fill("h",2) //now it will start filling from h from 2 position i.e 3 se  output will be like [1,2,h,----so on]
+       console.log(arr);
+   </script>
+   
+    <script>
+    
+       var arr = [1,2,3,4,5,6,7,8];
+       arr.fill("h",2,5) //now it will start filling from h from 2 position i.e 3 se   aur phir 
+        // 5 se end tk phir h ko nhi bharega output will be like [1,2,h,h,h,6,7,8]
+       console.log(arr);
+   </script>
+    
+    <!-- Working of filter function    -->
+    <script>
+     var arr = [1,2,3,4,5,6,7,8];
+     
+    const result = arr.filter((num) => num<6); // it will remove all the numbers which are less than 6 o/p=>[1,2,3,4,5]
+        
+        console.log(result);
+        
+    </script>    
+    
+    
+    <!-- Slicing in JS    -->
+    
+    <script>
+        var arr = ["A","B","C","D","E","F"];
+        console.log(arr.slice(0,3)); //3rd variable i.e will not be included like python
+        
+        var arr1 = ["A","B","C","D","E","F"];
+        console.log(arr.slice(2)); //A & B will be excluded rest all will come. if we do 1 than out ["B","C","D","E","F"]
+        
+    </script>
+    
+    <!-- Splicing in JS -->
+    <script>
+     var arr = ["A","B","C","D","E","F"];
+    arr.splice(1,2,"hii"); //start count from 1 i.e B and from there count 2 i.e B & C as 2 times counted and replace them with hii. rember 1 hii will be replaced by  B & C output => ["A", "hii", "D", "E", "F"]
+    console.log(arr);
+        
+    var arr1 = ["A","B","C","D","E","F"];
+    arr1.splice(1,3,"hii"); //start count from 1 i.e  from B and from there count 3 i.e B & C & D as 3 times counted
+    console.log(arr1);  //output ["A", "hii", "E", "F"]
+        
+    var arr2 = ["A","B","C","D","E","F"];
+    arr2.splice(1,3,"hii","byy","new") // start count from //start count from 1 i.e  from B and from there count 3 i.e B & C & D unki ghai respectively hii byy hiii aa jaiga. op-->["A", "hii", "byy", "new", "E", "F"]
+    console.log(arr2);    
+    // agr hii byy hota aur new nhi hota tau b,c,d tau remove ho jta pr b,c ki jaghai hii, byy aa jta aur d remove rhta 
+    </script>
+    
+</body>
+</html>

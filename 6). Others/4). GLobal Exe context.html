@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global Exe context</title>
+</head>
+
+<body>
+    
+    <script>
+        
+        
+        console.log(name); // will undefined.
+        
+        
+        
+        function sayName(){
+            name1 = "MBMMM"
+            console.log(name1); //will only be printed when the function is called.
+        }
+        sayName() 
+        var name = "MBM";
+        console.log(name); //MBM will be printed.
+        
+    </script>
+    
+    <script>
+        var name ="MBM";
+
+        console.log("At line no 3 "+ name);
+
+        function hello(){
+        console.log("At line no 6 "+name);
+        name="helo"
+        
+        hello1()
+        function hello1(){
+        console.log("At line no 11 "+name);
+    }
+
+    }
+        hello()
+
+    </script>
+    
+</body>
+</html>

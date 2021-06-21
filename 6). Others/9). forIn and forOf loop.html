@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ForOF and For IN loop</title>
+</head>
+
+<body>
+   
+   <script>
+    //forON
+   var arr=["india","new-zeland","England",007,"Australia","Pakistan","Sri-Lanka"];
+       
+       
+    // syntax for(let/const elemenrt OF who ever you weant to loop i.e arr in our case.)
+       // forOF is  basically used for array forIN is basically used for Objects.
+       
+       
+       //forOF example which is bacially used for array.
+       
+       var arr=["india","new-zeland","England",007,"Australia","Pakistan","Sri-Lanka"];
+       for(const element of arr){
+//           console.log(element);
+         }  
+           //or we can write
+          
+        for(var ele of arr){
+//            console.log(ele);
+        }
+       
+        for(let elem of arr){
+//            console.log(elem);
+        }
+       
+
+       
+    </script>
+    
+    
+    <script>
+        //forIN loop which is basically used for objects.
+        var socialMedia={
+            yt:"YouTube",
+            fb:"Facebook",
+            insta:"Instagram",
+            faiz:"Mohd Bahaul Mustafa"
+        };
+        for(const value in socialMedia){
+//            console.log(value); //it will print key only i.e yt,fb,insta,faiz
+        }
+        
+        //to print values
+        for(const val in socialMedia){
+//            console.log(socialMedia[val]) //i.e YouTube,Facebook....
+        }
+        //To print both keys and values.
+        for(let val in socialMedia){
+            console.log(`Full form of this ${val} abbrivation is ${socialMedia[val]}`);
+            //output=>  Full form of this yt abbrivation is YouTube
+        }
+        
+        
+        for(let val in socialMedia){ //if we of insted of in it will show error.
+            console.log(val,socialMedia[val]);
+        }
+    
+    
+    //Window object is basicaly refer to global context. 
+    </script>
+    
+    
+</body>
+</html>

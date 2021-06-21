@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoisting in JS</title>
+</head>
+
+<body>
+   
+   <script>
+       
+//    getName()
+//    console.log(x)   
+//    
+//    var x="abc";
+//    
+//    function getName(){
+//        console.log("Hello World");
+//    }
+       
+       //output-->get name will give ->Hello world
+       //  x will give undefined
+       
+    
+    </script>
+    
+    <script>
+//        getName() //==IT will print hello world
+//        console.log(getName) //--> It will return whole function as below
+//        
+//         function getName(){
+//            console.log("Hello World");
+//        }
+//        
+//        
+//        console.log(getName); //it will return whole function.
+//        
+        //it will return whole function
+        // even before code start executing the memory is allocated to all function and variable
+   
+    
+    </script>
+    
+    <script>
+        
+        getName() //-->Now it will show getName is not a function bcz getName is  behaving as a varaiable so in
+        //memory execution phase as it defines undefined to x it will assign undefined to getName. 
+        console.log(getName)
+        
+        //if we use aerrow functuion than
+        
+         var getName = ()=>{
+            console.log("Hello World");
+        }
+        
+        
+        console.log(getName);
+    
+    
+    
+    
+    
+    </script>
+    
+</body>
+</html>

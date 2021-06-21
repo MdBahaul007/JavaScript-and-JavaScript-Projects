@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <style>
+        button{
+            position: relative;
+            /* left: 47%; */
+            padding: 15px;
+            width: 100%;
+            background-color:  #CA0B00;
+            color: white;
+        }
+    </style>
+    <title>Covid 19 tracker</title>
+</head>
+<body>
+    <div class="continaer">
+    <h1 class="text-center mt-5"> Covid-19 Live Tracker</h1>
+    <br /> <br />
+    <table class="table table-hover text-center" >
+        <thead>
+          <tr>
+            <th>Total Cases</th>
+            <th>Total Deaths</th>
+            <th>Total Recovered</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="data"> <!--To put data dynamically-->
+          
+          </tr>
+        </tbody>
+      </table>  
+        <br/> <br />
+      <!-- <button class="btn btn-danger btn-block">Refresh Data</button>
+       -->
+      <button>Refresh Data</button>
+      
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

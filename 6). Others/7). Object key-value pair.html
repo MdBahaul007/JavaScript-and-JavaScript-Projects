@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects: key value pair.</title>
+</head>
+<body>
+  <script>
+   var user = {
+       firstName : "Mohd",
+       lastName : "Bahaul",
+       role : "admin",
+       loginCount: 32
+   };
+   
+        console.table(user);
+        console.log(user.firstName);
+      
+      console.log(user.loginCount);
+      //changing loginCount value
+      user.loginCount=45;
+      console.log(user.loginCount);
+      
+   </script> 
+   
+   
+<!-- Example of inserting object inside the methods  -->
+    <script>
+       var user = {
+           firstName : "Mohd",
+           lastName : "Bahaul",
+           role : "admin",
+           loginCount: 32,
+           courseList : [],
+           buyCourse : function(courseName){
+           this.courseList.push(courseName) // this keyword is used to access the course list inside the object user as there might be another variable of same name outside the object so we are telling to acces the varaible from current object
+           
+       },
+           //counting the number of coursre
+           courseCount:function(){
+               return `${this.firstName} is enrolled in ${this.courseList.length} courses`;
+           }
+           
+           
+   };
+        var courseList=true;
+        console.log(user.courseCount()) // will show 0 output as no course has been buyed.
+        user.buyCourse("Python");
+        user.buyCourse("Java");
+        console.log(user.courseCount())
+        
+        
+    </script>
+
+
+
+</body>
+</html>

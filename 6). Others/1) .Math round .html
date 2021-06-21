@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math round in JS</title>
+</head>
+<body>
+   
+    <script>
+        var listPrice = 799;
+        var sellingPrice = 699;
+        var discountPercentage = ((listPrice-sellingPrice)/listPrice)*100;
+        
+        var displayDiscountPercentage = Math.round(discountPercentage);
+        
+        console.log("Discount for above article is : " + displayDiscountPercentage);
+        console.log(discountPercentage);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetching color from html page</title>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+/*        border: 2px solid red;*/
+        height: 40px;
+        width: 400px;
+        margin: 20px auto;
+        padding: 40px;
+            
+    }
+    .box{
+        width: 60px;
+        height: 30px;
+        border: 2px solid black;
+        float: left;
+        padding: 10px;
+    }
+    .red{
+        background-color: red;
+    }
+    .green{
+        background-color: green;
+    }
+    .blue{
+        background-color: blue;
+    }
+    .orange{
+        background-color: orange;
+    }
+</style>
+
+
+</head>
+
+
+
+<body>
+   <div class="container">
+       <div class="red box"></div>
+       <div class="green box"></div>
+       <div class="blue box"></div>
+       <div class="orange box"></div>
+       
+   </div>
+   
+   
+  <!-- <script>
+       //In java script we want we select color it give color name
+       // In jS window keyword contain the property getcomputedstyle which is used to grab the CSS style.
+       var red = document.querySelector(".red");
+       var green=document.querySelector(".green");
+       var blue=document.querySelector(".blue");
+       var orange=document.querySelector(".orange");
+       
+       console.log(window.getComputedStyle(red).backgroundColor); //output will be in rgb format rgb(255, 0, 0)
+       console.log(window.getComputedStyle(blue).backgroundColor);
+    
+    
+    
+    </script> -->
+    
+    <script>
+        //Doing same thing using funcrtion
+    
+        var red = document.querySelector(".red");
+    
+        var green=document.querySelector(".green");
+    
+        var blue=document.querySelector(".blue");
+        var orange=document.querySelector(".orange");
+    
+        var getColor =(color)=>{
+            return window.getComputedStyle(color).backgroundColor;
+        };
+            
+        
+        console.log(getColor(orange));
+        
+    
+    </script>
+    
+</body>
+</html>
